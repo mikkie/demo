@@ -20,6 +20,8 @@
         "get": {
           "operationId": "getuser",
           "summary": "get all users",
+          "consumes" : "application/json",
+          "produces" : "application/json",  
           "responses": {
             "200": {
               "description": "success",
