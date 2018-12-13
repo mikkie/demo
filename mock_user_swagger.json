@@ -1,0 +1,58 @@
+[
+  {
+    "id": "1",
+    "definitions": {
+      "user": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "age": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "paths": {
+      "/users": {
+        "get": {
+          "operationId": "getuser",
+          "summary": "get all users",
+          "responses": {
+            "200": {
+              "description": "success",
+              "schema": {
+                "type": "array",
+                "items": {
+                  "type": "object",
+                  "$ref": "#/definitions/user"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "info": {
+      "title": "mock_user_api",
+      "version": "1.0.0",
+      "description": "this is a test rest api for infomatica"
+    },
+    "host": "5c08e06bea3172001389cc93.mockapi.io",
+    "basePath": "/api/v1/",
+    "schemes": [
+      "http"
+    ],
+    "consumes": [
+      "application/json"
+    ],
+    "produces": [
+      "application/json"
+    ],
+    "swagger": "2.0"
+  }
+]
