@@ -3,13 +3,13 @@
       "user": {
         "type": "object",
         "properties": {
-          "id": {
+              "ID": {
             "type": "string"
           },
-          "name": {
+          "NAME": {
             "type": "string"
           },
-          "age": {
+          "AGE": {
             "type": "integer"
           }
         }
