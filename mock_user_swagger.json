@@ -1,6 +1,4 @@
-[
-  {
-    "id": "1",
+{
     "definitions": {
       "user": {
         "type": "object",
@@ -55,4 +53,3 @@
     ],
     "swagger": "2.0"
   }
-]
