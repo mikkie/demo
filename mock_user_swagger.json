@@ -1,54 +1,63 @@
 {
-    "definitions": {
-      "user": {
-        "type": "object",
-        "properties": {
-              "ID": {
-            "type": "string"
-          },
-          "NAME": {
-            "type": "string"
-          },
-          "AGE": {
-            "type": "integer"
-          }
-        }
-      }
-    },
-    "paths": {
-      "/users": {
-        "get": {
-          "operationId": "getuser",
-          "summary": "get all users", 
-          "responses": {
-            "200": {
-              "description": "success",
-              "schema": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/definitions/user"
-                }
+  "paths": {
+    "/users": {
+      "get": {
+        "operationId": "getuser",
+        "summary": "get all users",
+        "responses": {
+          "200": {
+            "description": "success",
+            "schema": {
+              "x-oad-type": "array",
+              "type": "array",
+              "items": {
+                "x-oad-type": "reference",
+                "$ref": "#/definitions/user"
               }
-            }
+            },
+            "x-oad-type": "response"
           }
         }
+      },
+      "x-oad-type": "operation"
+    }
+  },
+  "definitions": {
+    "user": {
+      "x-oad-type": "object",
+      "type": "object",
+      "properties": {
+        "id": {
+          "x-oad-type": "string",
+          "type": "string"
+        },
+        "name": {
+          "x-oad-type": "string",
+          "type": "string"
+        },
+        "age": {
+          "x-oad-type": "integer",
+          "type": "integer",
+          "format": "int32"
+        }
       }
-    },
-    "info": {
-      "title": "mock_user_api",
-      "version": "1.0.0",
-      "description": "this is a test rest api for infomatica"
-    },
-    "host": "5c08e06bea3172001389cc93.mockapi.io",
-    "basePath": "/api/v1/",
-    "schemes": [
-      "http"
-    ],
-    "consumes": [
-      "application/json"
-    ],
-    "produces": [
-      "application/json"
-    ],
-    "swagger": "2.0"
-  }
+    }
+  },
+  "info": {
+    "title": "mock_user_api",
+    "version": "1.0.0",
+    "description": "this is a test rest api for infomatica"
+  },
+  "host": "5c08e06bea3172001389cc93.mockapi.io",
+  "basePath": "/api/v1/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "swagger": "2.0"
+}
