@@ -11,7 +11,7 @@
               "x-oad-type": "object",
               "type": "object",
               "properties": {
-                "result": {
+                "user": {
                   "x-oad-type": "array",
                   "type": "array",
                   "items": {
