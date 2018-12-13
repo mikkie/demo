@@ -8,11 +8,17 @@
           "200": {
             "description": "success",
             "schema": {
-              "x-oad-type": "array",
-              "type": "array",
-              "items": {
-                "x-oad-type": "reference",
-                "$ref": "#/definitions/user"
+              "x-oad-type": "object",
+              "type": "object",
+              "properties": {
+                "result": {
+                  "x-oad-type": "array",
+                  "type": "array",
+                  "items": {
+                    "x-oad-type": "reference",
+                    "$ref": "#/definitions/user"
+                  }
+                }
               }
             },
             "x-oad-type": "response"
